@@ -1,0 +1,111 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+}
+.container{
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 10px;
+}
+.nav{
+      width: 100%;
+}
+.nav-content{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+.left img{
+      width: 250px;
+      height: 100px;
+}
+.right {
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+}
+.list{
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      list-style: none;
+}
+.list a{
+      color: black;
+      font-size: 18px;
+      font-weight: 600;
+}
+.bars{
+      flex-direction: column;
+      gap: 3px;
+      display: none;
+}
+.bars span{
+      width: 20px;
+      height: 3px;
+      background-color: black;
+      border-radius: 2px;
+}
+.menu{
+      width: 100%;
+      position: fixed;
+      height: 0;
+      top: 125.33px;
+      left: 0;
+      background-color: black;
+      z-index: 500;
+      padding: 0 40px;
+      overflow: hidden;
+      transition: all 0.3s linear;
+}
+.menu.active{
+      height: auto;
+      padding: 40px;
+      transition: all 0.3s linear;
+}
+.list2{
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      text-decoration: none;
+      list-style: none;
+}
+.list2 a{
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+}
+
+.bars span{
+      transition: transform 0.7s linear(0.98-5.88%,-0.24 65.2%,-0.28 18.63%, 1.01 45.59%);
+
+}
+.bars.active span:nth-child(2){
+      display: none;
+      transition: transform 0.3s linear(0.98-5.88%,-0.24 65.2%,-0.28 18.63%, 1.01 45.59%);
+}
+.bars.active span:nth-child(1){
+      transform: rotate(45deg) translateY(4px);
+      transition: transform 0.3s linear(0.98-5.88%,-0.24 65.2%,-0.28 18.63%, 1.01 45.59%);
+
+}
+.bars.active span:nth-child(3){
+      transform: rotate(-45deg) translateY(-4px);
+      transition: transform 0.3s linear(0.98-5.88%,-0.24 65.2%,-0.28 18.63%, 1.01 45.59%);
+}
+@media (max-width: 530px){
+      .list{
+            display: none;
+      }
+      .bars{
+            display: flex;
+      }
+}
